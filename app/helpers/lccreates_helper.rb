@@ -1,0 +1,2 @@
+module LccreatesHelper
+end

@@ -1,0 +1,61 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Docsets</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Description</th>
+      <th>Document date</th>
+      <th>Document currency</th>
+      <th>Document amount</th>
+      <th>Shipment date</th>
+      <th>Country of origin</th>
+      <th>Incoterms</th>
+      <th>Shipment from</th>
+      <th>Port of loading</th>
+      <th>Port of discharge</th>
+      <th>Final destination</th>
+      <th>Goods description</th>
+      <th>Consignee</th>
+      <th>Shipper</th>
+      <th>Notify party</th>
+      <th>Issuing bank</th>
+      <th>Remarks</th>
+      <th>Lccreate</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @docsets.each do |docset| %>
+      <tr>
+        <td><%= docset.description %></td>
+        <td><%= docset.document_date %></td>
+        <td><%= docset.document_currency %></td>
+        <td><%= docset.document_amount %></td>
+        <td><%= docset.shipment_date %></td>
+        <td><%= docset.country_of_origin %></td>
+        <td><%= docset.incoterms %></td>
+        <td><%= docset.shipment_from %></td>
+        <td><%= docset.port_of_loading %></td>
+        <td><%= docset.port_of_discharge %></td>
+        <td><%= docset.final_destination %></td>
+        <td><%= docset.goods_description %></td>
+        <td><%= docset.consignee %></td>
+        <td><%= docset.shipper %></td>
+        <td><%= docset.notify_party %></td>
+        <td><%= docset.issuing_bank %></td>
+        <td><%= docset.remarks %></td>
+        <td><%= docset.lccreate_id %></td>
+        <td><%= link_to 'Show', docset %></td>
+        <td><%= link_to 'Edit', edit_docset_path(docset) %></td>
+        <td><%= link_to 'Destroy', docset, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Docset', new_docset_path %>

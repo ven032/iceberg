@@ -1,0 +1,71 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Lccreates</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Lc number</th>
+      <th>Issue date</th>
+      <th>Expiry date</th>
+      <th>Currency</th>
+      <th>Amount</th>
+      <th>Applicant</th>
+      <th>Beneficiary</th>
+      <th>Issuing bank</th>
+      <th>Tenor</th>
+      <th>Shipment from</th>
+      <th>Port of loading</th>
+      <th>Port of discharge</th>
+      <th>Final destination</th>
+      <th>Latest shipment date</th>
+      <th>Partial shipment</th>
+      <th>Transhipment</th>
+      <th>Goods description</th>
+      <th>Documents required</th>
+      <th>Additional conditions</th>
+      <th>Drawee</th>
+      <th>Available with</th>
+      <th>Available by</th>
+      <th>Remarks</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @lccreates.each do |lccreate| %>
+      <tr>
+        <td><%= lccreate.lc_number %></td>
+        <td><%= lccreate.issue_date %></td>
+        <td><%= lccreate.expiry_date %></td>
+        <td><%= lccreate.currency %></td>
+        <td><%= lccreate.amount %></td>
+        <td><%= lccreate.applicant %></td>
+        <td><%= lccreate.beneficiary %></td>
+        <td><%= lccreate.issuing_bank %></td>
+        <td><%= lccreate.tenor %></td>
+        <td><%= lccreate.shipment_from %></td>
+        <td><%= lccreate.port_of_loading %></td>
+        <td><%= lccreate.port_of_discharge %></td>
+        <td><%= lccreate.final_destination %></td>
+        <td><%= lccreate.latest_shipment_date %></td>
+        <td><%= lccreate.partial_shipment %></td>
+        <td><%= lccreate.transhipment %></td>
+        <td><%= lccreate.goods_description %></td>
+        <td><%= lccreate.documents_required %></td>
+        <td><%= lccreate.additional_conditions %></td>
+        <td><%= lccreate.drawee %></td>
+        <td><%= lccreate.available_with %></td>
+        <td><%= lccreate.available_by %></td>
+        <td><%= lccreate.remarks %></td>
+        <td><%= link_to 'Show', lccreate %></td>
+        <td><%= link_to 'Edit', edit_lccreate_path(lccreate) %></td>
+        <td><%= link_to 'Destroy', lccreate, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Lccreate', new_lccreate_path %>
